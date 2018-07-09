@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="989e5e3caf61426e80c32a2c183a6cd3" Name="Diagram1" ZoomLevel="66">
+        <EntityTypeShape EntityType="AdvInvSystemModel.Account" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.Brand" Width="1.5" PointX="9.625" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.ChequeList" Width="1.5" PointX="11.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.Customer" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.CustomersAccount" Width="1.5" PointX="1" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.Expense" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.LoginUser" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.Product" Width="1.5" PointX="11.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.PurchaseDetail" Width="1.5" PointX="9.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.PurchaseInvoice" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.RateChangeLog" Width="1.5" PointX="9.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.SaleDetail" Width="1.5" PointX="7.375" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.SaleInvoice" Width="1.5" PointX="5.375" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.StockLocation" Width="1.5" PointX="1" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.Stock" Width="1.5" PointX="0.875" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.SupplierAccount" Width="1.5" PointX="9.625" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.Supplier" Width="1.5" PointX="7.625" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.sysdiagram" Width="1.5" PointX="11.75" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_Expense_Accounts" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_PurchaseInvoice_Accounts" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_SaleInvoice_Accounts" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_Products_Brands" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_CustomersAccount_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_SaleInvoice_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_Expense_LoginUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_Expense_StockLocations" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_LoginUsers_StockLocations" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_PurchaseInvoice_LoginUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_SaleInvoice_LoginUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_PurchaseDetail_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_PurchaseDetail_PurchaseInvoice" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_PurchaseInvoice_StockLocations" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_PurchaseInvoice_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_SaleDetail_SaleInvoice" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_SaleInvoice_StockLocations" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_Stocks_StockLocations" ManuallyRouted="false" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_SupplierAccount_Suppliers" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.User" Width="1.5" PointX="11.75" PointY="3.25" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.BnkTan" Width="1.5" PointX="9.625" PointY="12.125" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.CashTran" Width="1.5" PointX="7.5" PointY="12.375" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_BnkTans_ChequeList" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.AccountDetail" Width="1.5" PointX="5.625" PointY="10.5" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_AccountDetail_Accounts" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_BnkTans_AccountDetail" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_CashTrans_AccountDetail" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_PurchaseInvoice_AccountDetail" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_SaleInvoice_AccountDetail" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_AccountDetail_PurchaseInvoice" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_AccountDetail_SaleInvoice" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.ExcludeProduct" Width="1.5" PointX="3.125" PointY="12" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_ExcludeProducts_LoginUsers" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_ExcludeProducts_Products" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_ExcludeProducts_StockLocations" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.Withdraw" Width="1.5" PointX="1" PointY="11.375" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_Withdraw_Accounts" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_Withdraw_LoginUsers" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_Withdraw_StockLocations" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.AddFund" Width="1.5" PointX="7.5" PointY="14.75" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.FundTran" Width="1.5" PointX="5.375" PointY="15" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_AddFund_Accounts1" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_AddFund_LoginUsers" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_AddFund_StockLocations1" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_FundTrans_LoginUsers" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_FundTrans_StockLocations" />
+        <EntityTypeShape EntityType="AdvInvSystemModel.AddStock" Width="1.5" PointX="11.75" PointY="10.125" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_AddStock_LoginUsers" />
+        <AssociationConnector Association="AdvInvSystemModel.FK_AddStock_Products" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

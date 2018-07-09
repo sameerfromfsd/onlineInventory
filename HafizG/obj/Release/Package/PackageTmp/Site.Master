@@ -1,0 +1,340 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HafizG.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    
+    <asp:PlaceHolder runat="server">     
+       
+    </asp:PlaceHolder>  
+   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%: Page.Title %> - Hafiz G Food Concern - </title>
+    <meta name="description" content="Hafiz jee Food Concern - Real taste of food">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.html">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
+    <link rel="stylesheet" href="assets/scss/style.css">
+    <link href="assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+
+  
+  
+    <link rel="stylesheet" href="assets/css/lib/chosen/chosen.min.css">
+
+    <script src="Scripts/jquery.mask.js"></script>
+
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="/resources/demos/style.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      
+
+  
+</head>
+
+<body>
+    <form runat="server">
+   
+     
+        <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"/></a>
+                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"/></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li class="active">
+                        <a href="Default.aspx"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+
+                    <h3 class="menu-title">SALES - Purchase</h3><!-- /.menu-title -->
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Sale</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="ti-receipt"></i><a href="saleInvoice.aspx">Generate Sale Invoice</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="ViewSaleInvoice.aspx">View/Edit Sale Invoice</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Purchase</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="purchase.aspx">Generate Invoice</a></li>
+                            <li><i class="fa fa-table"></i><a href="ViewPurchaseInvoice.aspx">View/Edit Invoice</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Expense</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="Expense.aspx">Expense Invoice</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="ViewExpense.aspx">View Expenses</a></li>
+                        </ul>
+                    </li>
+
+                    <h3 class="menu-title">Brands - Products</h3><!-- /.menu-title -->
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Brands</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="Brands.aspx">View Brands</a></li>
+                            <li><i class="menu-icon ti-tablet"></i><a href="Prod.aspx">View Products</a></li>
+                            <li><i class="menu-icon ti-control-shuffle"></i><a href="font-themify.html">Rate Change Log</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="ProductStock.aspx"> <i class="menu-icon ti-harddrives"></i>Stock </a>
+                    </li>
+                    <li>
+                        <a href="Exclude.aspx"> <i class="menu-icon ti-harddrives"></i>Exclude Stock </a>
+                    </li>
+                     <li runat="server" id="AddStock" >
+                        <a href="AddNewStock.aspx"> <i class="menu-icon ti-harddrives"></i>Add Stock </a>
+                    </li>
+                     <li>
+                        <a href="Suppliers.aspx"> <i class="menu-icon ti-user"></i>Suppliers </a>
+                    </li>
+                     <li>
+                        <a href="Custom.aspx"> <i class="menu-icon ti-shopping-cart-full"></i>Customers </a>
+                    </li>
+                    <li>
+                        <a href="Branches.aspx"> <i class="menu-icon ti-vector"></i>Branches </a>
+                    </li>
+                   
+                    <h3 class="menu-title" runat="server" id="mangTitle">Managments</h3><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown" runat="server" id="AdminMang">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-settings"></i>Admin Setting</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon ti-id-badge"></i><a href="Users.aspx">Users</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="Accounts.aspx">Accounts</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="FundTransfer.aspx">Fund Transfer</a></li>
+                            <li><i class="menu-icon ti-import"></i><a href="pages-forget.html">Back Up</a></li>
+                        </ul>
+                    </li>
+
+                     <li class="menu-item-has-children dropdown" runat="server" id="AdminReport">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon ti-bar-chart"></i>Reporting</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            
+                            <li><i class="menu-icon ti-server"></i><a href="Reporting.aspx">Report Summry</a></li>
+
+                             <li><i class="menu-icon ti-server"></i><a href="page-register.html">Account Report</a></li>
+                            <li><i class="menu-icon ti-server"></i><a href="pages-forget.html">Branch Report</a></li>
+                            <li><i class="menu-icon ti-server"></i><a href="pages-forget.html">Expense Report</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                       
+
+                        <div class="dropdown for-notification">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell"></i>
+                            <span class="count bg-danger">5</span>
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="notification">
+                            <p class="red">You have 3 Notification</p>
+                            <a class="dropdown-item media bg-flat-color-1" href="#">
+                                <i class="fa fa-check"></i>
+                                <p>Server #1 overloaded.</p>
+                            </a>
+                            <a class="dropdown-item media bg-flat-color-4" href="#">
+                                <i class="fa fa-info"></i>
+                                <p>Server #2 overloaded.</p>
+                            </a>
+                            <a class="dropdown-item media bg-flat-color-5" href="#">
+                                <i class="fa fa-warning"></i>
+                                <p>Server #3 overloaded.</p>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="dropdown for-message">
+                          <button class="btn btn-secondary dropdown-toggle" type="button"
+                                id="message"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ti-email"></i>
+                            <span class="count bg-primary">9</span>
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="message">
+                            <p class="red">You have 4 Mails</p>
+                            <a class="dropdown-item media bg-flat-color-1" href="#">
+                                <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
+                                <span class="message media-body">
+                                    <span class="name float-left">Jonathan Smith</span>
+                                    <span class="time float-right">Just now</span>
+                                        <p>Hello, this is an example msg</p>
+                                </span>
+                            </a>
+                            <a class="dropdown-item media bg-flat-color-4" href="#">
+                                <span class="photo media-left"><img alt="avatar" src="images/avatar/2.jpg"></span>
+                                <span class="message media-body">
+                                    <span class="name float-left">Jack Sanders</span>
+                                    <span class="time float-right">5 minutes ago</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                </span>
+                            </a>
+                            <a class="dropdown-item media bg-flat-color-5" href="#">
+                                <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
+                                <span class="message media-body">
+                                    <span class="name float-left">Cheryl Wheeler</span>
+                                    <span class="time float-right">10 minutes ago</span>
+                                        <p>Hello, this is an example msg</p>
+                                </span>
+                            </a>
+                            <a class="dropdown-item media bg-flat-color-3" href="#">
+                                <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
+                                <span class="message media-body">
+                                    <span class="name float-left">Rachel Santos</span>
+                                    <span class="time float-right">15 minutes ago</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                </span>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="float-left">
+                                <asp:Label ID="userNmTxt" runat="server" Text="Label"></asp:Label>
+                                <br />
+                                <asp:Label ID="UserEmTxt" runat="server" Text="Label"></asp:Label>
+                            </div>
+                            
+                            <asp:Image ID="Image1" CssClass="user-avatar rounded-circle" runat="server" />
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                                <a class="nav-link" href="UserSetting.aspx"><i class="fa fa- user"></i>My Profile</a>
+
+                                <a class="nav-link" href="Login.aspx"><i class="fa fa-power -off"></i>Logout</a>
+                        </div>
+                    </div>
+
+                    <div  >
+                       
+                    </div>
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+      
+
+       <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+       <asp:ContentPlaceHolder runat="server" ID="MainContent" />  
+
+   </div>
+   <!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+    <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="assets/js/lib/chart-js/Chart.bundle.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/widgets.js"></script>
+    <script src="assets/js/lib/vector-map/jquery.vmap.js"></script>
+    <script src="assets/js/lib/vector-map/jquery.vmap.min.js"></script>
+    <script src="assets/js/lib/vector-map/jquery.vmap.sampledata.js"></script>
+    <script src="assets/js/lib/vector-map/country/jquery.vmap.world.js"></script>
+    
+         
+    <script src="assets/js/popper.min.js"></script>
+    
+    
+    <script src="assets/js/lib/chosen/chosen.jquery.min.js"></script>
+
+    <script>
+        
+        jQuery(document).ready(function () {
+            
+            jQuery(".standardSelect").chosen();
+        });
+
+    </script>
+
+
+        <script>
+            jQuery(document).ready(function () {
+                
+                jQuery(".custype").chosen();
+            });
+
+        </script>
+
+         <script>
+        (function ($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
+   
+    
+    </form>
+</body>
+</html>

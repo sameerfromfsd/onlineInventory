@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdvInvSystemModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AdvInvSystemModelStoreContainer">
+    <EntitySet Name="AccountDetail" EntityType="AdvInvSystemModel.Store.AccountDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Accounts" EntityType="AdvInvSystemModel.Store.Accounts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AddFund" EntityType="AdvInvSystemModel.Store.AddFund" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AddStock" EntityType="AdvInvSystemModel.Store.AddStock" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BnkTans" EntityType="AdvInvSystemModel.Store.BnkTans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Brands" EntityType="AdvInvSystemModel.Store.Brands" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CashTrans" EntityType="AdvInvSystemModel.Store.CashTrans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChequeList" EntityType="AdvInvSystemModel.Store.ChequeList" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customers" EntityType="AdvInvSystemModel.Store.Customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CustomersAccount" EntityType="AdvInvSystemModel.Store.CustomersAccount" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExcludeProducts" EntityType="AdvInvSystemModel.Store.ExcludeProducts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Expense" EntityType="AdvInvSystemModel.Store.Expense" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FundTrans" EntityType="AdvInvSystemModel.Store.FundTrans" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoginUsers" EntityType="AdvInvSystemModel.Store.LoginUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="AdvInvSystemModel.Store.Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PurchaseDetail" EntityType="AdvInvSystemModel.Store.PurchaseDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PurchaseInvoice" EntityType="AdvInvSystemModel.Store.PurchaseInvoice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RateChangeLog" EntityType="AdvInvSystemModel.Store.RateChangeLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SaleDetail" EntityType="AdvInvSystemModel.Store.SaleDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SaleInvoice" EntityType="AdvInvSystemModel.Store.SaleInvoice" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StockLocations" EntityType="AdvInvSystemModel.Store.StockLocations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Stocks" EntityType="AdvInvSystemModel.Store.Stocks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SupplierAccount" EntityType="AdvInvSystemModel.Store.SupplierAccount" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Suppliers" EntityType="AdvInvSystemModel.Store.Suppliers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="AdvInvSystemModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="AdvInvSystemModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Withdraw" EntityType="AdvInvSystemModel.Store.Withdraw" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_AccountDetail_Accounts" Association="AdvInvSystemModel.Store.FK_AccountDetail_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="AccountDetail" EntitySet="AccountDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AccountDetail_PurchaseInvoice" Association="AdvInvSystemModel.Store.FK_AccountDetail_PurchaseInvoice">
+      <End Role="PurchaseInvoice" EntitySet="PurchaseInvoice" />
+      <End Role="AccountDetail" EntitySet="AccountDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AccountDetail_SaleInvoice" Association="AdvInvSystemModel.Store.FK_AccountDetail_SaleInvoice">
+      <End Role="SaleInvoice" EntitySet="SaleInvoice" />
+      <End Role="AccountDetail" EntitySet="AccountDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AddFund_Accounts1" Association="AdvInvSystemModel.Store.FK_AddFund_Accounts1">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="AddFund" EntitySet="AddFund" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AddFund_LoginUsers" Association="AdvInvSystemModel.Store.FK_AddFund_LoginUsers">
+      <End Role="LoginUsers" EntitySet="LoginUsers" />
+      <End Role="AddFund" EntitySet="AddFund" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AddFund_StockLocations1" Association="AdvInvSystemModel.Store.FK_AddFund_StockLocations1">
+      <End Role="StockLocations" EntitySet="StockLocations" />
+      <End Role="AddFund" EntitySet="AddFund" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AddStock_LoginUsers" Association="AdvInvSystemModel.Store.FK_AddStock_LoginUsers">
+      <End Role="LoginUsers" EntitySet="LoginUsers" />
+      <End Role="AddStock" EntitySet="AddStock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AddStock_Products" Association="AdvInvSystemModel.Store.FK_AddStock_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="AddStock" EntitySet="AddStock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BnkTans_AccountDetail" Association="AdvInvSystemModel.Store.FK_BnkTans_AccountDetail">
+      <End Role="AccountDetail" EntitySet="AccountDetail" />
+      <End Role="BnkTans" EntitySet="BnkTans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BnkTans_ChequeList" Association="AdvInvSystemModel.Store.FK_BnkTans_ChequeList">
+      <End Role="ChequeList" EntitySet="ChequeList" />
+      <End Role="BnkTans" EntitySet="BnkTans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CashTrans_AccountDetail" Association="AdvInvSystemModel.Store.FK_CashTrans_AccountDetail">
+      <End Role="AccountDetail" EntitySet="AccountDetail" />
+      <End Role="CashTrans" EntitySet="CashTrans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CustomersAccount_Customers" Association="AdvInvSystemModel.Store.FK_CustomersAccount_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="CustomersAccount" EntitySet="CustomersAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExcludeProducts_LoginUsers" Association="AdvInvSystemModel.Store.FK_ExcludeProducts_LoginUsers">
+      <End Role="LoginUsers" EntitySet="LoginUsers" />
+      <End Role="ExcludeProducts" EntitySet="ExcludeProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExcludeProducts_Products" Association="AdvInvSystemModel.Store.FK_ExcludeProducts_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ExcludeProducts" EntitySet="ExcludeProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExcludeProducts_StockLocations" Association="AdvInvSystemModel.Store.FK_ExcludeProducts_StockLocations">
+      <End Role="StockLocations" EntitySet="StockLocations" />
+      <End Role="ExcludeProducts" EntitySet="ExcludeProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expense_Accounts" Association="AdvInvSystemModel.Store.FK_Expense_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expense_LoginUsers" Association="AdvInvSystemModel.Store.FK_Expense_LoginUsers">
+      <End Role="LoginUsers" EntitySet="LoginUsers" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expense_StockLocations" Association="AdvInvSystemModel.Store.FK_Expense_StockLocations">
+      <End Role="StockLocations" EntitySet="StockLocations" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FundTrans_LoginUsers" Association="AdvInvSystemModel.Store.FK_FundTrans_LoginUsers">
+      <End Role="LoginUsers" EntitySet="LoginUsers" />
+      <End Role="FundTrans" EntitySet="FundTrans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FundTrans_StockLocations" Association="AdvInvSystemModel.Store.FK_FundTrans_StockLocations">
+      <End Role="StockLocations" EntitySet="StockLocations" />
+      <End Role="FundTrans" EntitySet="FundTrans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoginUsers_StockLocations" Association="AdvInvSystemModel.Store.FK_LoginUsers_StockLocations">
+      <End Role="StockLocations" EntitySet="StockLocations" />
+      <End Role="LoginUsers" EntitySet="LoginUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Brands" Association="AdvInvSystemModel.Store.FK_Products_Brands">
+      <End Role="Brands" EntitySet="Brands" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDetail_Products" Association="AdvInvSystemModel.Store.FK_PurchaseDetail_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseDetail_PurchaseInvoice" Association="AdvInvSystemModel.Store.FK_PurchaseDetail_PurchaseInvoice">
+      <End Role="PurchaseInvoice" EntitySet="PurchaseInvoice" />
+      <End Role="PurchaseDetail" EntitySet="PurchaseDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseInvoice_Accounts" Association="AdvInvSystemModel.Store.FK_PurchaseInvoice_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="PurchaseInvoice" EntitySet="PurchaseInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseInvoice_LoginUsers" Association="AdvInvSystemModel.Store.FK_PurchaseInvoice_LoginUsers">
+      <End Role="LoginUsers" EntitySet="LoginUsers" />
+      <End Role="PurchaseInvoice" EntitySet="PurchaseInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseInvoice_StockLocations" Association="AdvInvSystemModel.Store.FK_PurchaseInvoice_StockLocations">
+      <End Role="StockLocations" EntitySet="StockLocations" />
+      <End Role="PurchaseInvoice" EntitySet="PurchaseInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseInvoice_Suppliers" Association="AdvInvSystemModel.Store.FK_PurchaseInvoice_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="PurchaseInvoice" EntitySet="PurchaseInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleDetail_SaleInvoice" Association="AdvInvSystemModel.Store.FK_SaleDetail_SaleInvoice">
+      <End Role="SaleInvoice" EntitySet="SaleInvoice" />
+      <End Role="SaleDetail" EntitySet="SaleDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleInvoice_Accounts" Association="AdvInvSystemModel.Store.FK_SaleInvoice_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="SaleInvoice" EntitySet="SaleInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleInvoice_Customers" Association="AdvInvSystemModel.Store.FK_SaleInvoice_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="SaleInvoice" EntitySet="SaleInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleInvoice_LoginUsers" Association="AdvInvSystemModel.Store.FK_SaleInvoice_LoginUsers">
+      <End Role="LoginUsers" EntitySet="LoginUsers" />
+      <End Role="SaleInvoice" EntitySet="SaleInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaleInvoice_StockLocations" Association="AdvInvSystemModel.Store.FK_SaleInvoice_StockLocations">
+      <End Role="StockLocations" EntitySet="StockLocations" />
+      <End Role="SaleInvoice" EntitySet="SaleInvoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stocks_StockLocations" Association="AdvInvSystemModel.Store.FK_Stocks_StockLocations">
+      <End Role="StockLocations" EntitySet="StockLocations" />
+      <End Role="Stocks" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierAccount_Suppliers" Association="AdvInvSystemModel.Store.FK_SupplierAccount_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="SupplierAccount" EntitySet="SupplierAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Withdraw_Accounts" Association="AdvInvSystemModel.Store.FK_Withdraw_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Withdraw" EntitySet="Withdraw" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Withdraw_LoginUsers" Association="AdvInvSystemModel.Store.FK_Withdraw_LoginUsers">
+      <End Role="LoginUsers" EntitySet="LoginUsers" />
+      <End Role="Withdraw" EntitySet="Withdraw" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Withdraw_StockLocations" Association="AdvInvSystemModel.Store.FK_Withdraw_StockLocations">
+      <End Role="StockLocations" EntitySet="StockLocations" />
+      <End Role="Withdraw" EntitySet="Withdraw" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AccountDetail">
+    <Key>
+      <PropertyRef Name="AccountsDetailId" />
+    </Key>
+    <Property Name="AccountsDetailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Particular" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Mode" Type="varchar" MaxLength="50" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="SaleInvId" Type="int" />
+    <Property Name="PurchInvId" Type="int" />
+  </EntityType>
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="AccountId" />
+    </Key>
+    <Property Name="AccountId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Bank" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CurrentBalance" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AddFund">
+    <Key>
+      <PropertyRef Name="AddFundId" />
+    </Key>
+    <Property Name="AddFundId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Particular" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="AccountId" Type="int" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Time" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AddStock">
+    <Key>
+      <PropertyRef Name="AddStockId" />
+    </Key>
+    <Property Name="AddStockId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="SalePrice" Type="int" />
+    <Property Name="PurcPrice" Type="int" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Time" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BnkTans">
+    <Key>
+      <PropertyRef Name="BnkTansId" />
+    </Key>
+    <Property Name="BnkTansId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Particular" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="AccountDetailId" Type="int" />
+    <Property Name="ChequeId" Type="int" />
+    <Property Name="MadeBy" Type="varchar" MaxLength="50" />
+    <Property Name="DueDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Brands">
+    <Key>
+      <PropertyRef Name="BrandId" />
+    </Key>
+    <Property Name="BrandId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Logo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CashTrans">
+    <Key>
+      <PropertyRef Name="CashTransId" />
+    </Key>
+    <Property Name="CashTransId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Particular" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="AccountDetailId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChequeList">
+    <Key>
+      <PropertyRef Name="ChequeId" />
+    </Key>
+    <Property Name="ChequeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Mode" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ChequeNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Bank" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MadeBy" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="50" />
+    <Property Name="CellNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Balance" Type="int" />
+    <Property Name="BadDebt" Type="varchar" MaxLength="50" />
+    <Property Name="Cnic" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CustomersAccount">
+    <Key>
+      <PropertyRef Name="CustomerAccountId" />
+    </Key>
+    <Property Name="CustomerAccountId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="Particular" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Credit" Type="int" />
+    <Property Name="Debit" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="BlackList" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ExcludeProducts">
+    <Key>
+      <PropertyRef Name="ExId" />
+    </Key>
+    <Property Name="ExId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Particular" Type="varchar" MaxLength="50" />
+    <Property Name="Product" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Worth" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="userId" Type="int" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="ExpenseId" />
+    </Key>
+    <Property Name="ExpenseId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Particular" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="BranchId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FundTrans">
+    <Key>
+      <PropertyRef Name="FundTransId" />
+    </Key>
+    <Property Name="FundTransId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Particular" Type="varchar" MaxLength="50" />
+    <Property Name="FromAccount" Type="varchar" MaxLength="50" />
+    <Property Name="ToAccount" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Time" Type="varchar" MaxLength="50" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="BranchId" Type="int" />
+  </EntityType>
+  <EntityType Name="LoginUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CellNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Image" Type="varchar" MaxLength="80" />
+    <Property Name="LocAssigned" Type="int" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Unit" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SalePrice" Type="int" Nullable="false" />
+    <Property Name="PurchasePrice" Type="int" Nullable="false" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
+    <Property Name="img" Type="varchar" MaxLength="50" />
+    <Property Name="Margin" Type="float" />
+    <Property Name="MinStock" Type="int" />
+  </EntityType>
+  <EntityType Name="PurchaseDetail">
+    <Key>
+      <PropertyRef Name="PurchaseDetailId" />
+    </Key>
+    <Property Name="PurchaseDetailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="PurchaseInvoice" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseInvoice">
+    <Key>
+      <PropertyRef Name="PurchaseInvoiceId" />
+    </Key>
+    <Property Name="PurchaseInvoiceId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BrandId" Type="int" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="ReferenceId" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Paid" Type="int" Nullable="false" />
+    <Property Name="Balance" Type="int" Nullable="false" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="AccountCredit" Type="int" Nullable="false" />
+    <Property Name="StockLocId" Type="int" Nullable="false" />
+    <Property Name="SupplierId" Type="int" />
+    <Property Name="PaymentMode" Type="varchar" MaxLength="50" />
+    <Property Name="TransactionId" Type="int" />
+  </EntityType>
+  <EntityType Name="RateChangeLog">
+    <Key>
+      <PropertyRef Name="RateId" />
+    </Key>
+    <Property Name="RateId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="BrandId" Type="int" />
+    <Property Name="PreviousPrice" Type="int" Nullable="false" />
+    <Property Name="NewPrice" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaleDetail">
+    <Key>
+      <PropertyRef Name="SaleInvoiceDetailId" />
+    </Key>
+    <Property Name="SaleInvoiceDetailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="Quatity" Type="int" Nullable="false" />
+    <Property Name="Rate" Type="int" Nullable="false" />
+    <Property Name="DiscountedRate" Type="int" Nullable="false" />
+    <Property Name="SaleInvoiceId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaleInvoice">
+    <Key>
+      <PropertyRef Name="SaleInvoicId" />
+    </Key>
+    <Property Name="SaleInvoicId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="BranchId" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="Payable" Type="int" Nullable="false" />
+    <Property Name="Paid" Type="int" Nullable="false" />
+    <Property Name="ChangeReturn" Type="int" />
+    <Property Name="AccountId" Type="int" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="PaymentMode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TransactionId" Type="int" />
+    <Property Name="Time" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StockLocations">
+    <Key>
+      <PropertyRef Name="StockLocId" />
+    </Key>
+    <Property Name="StockLocId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Location" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Supervisor" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Stocks">
+    <Key>
+      <PropertyRef Name="StockId" />
+    </Key>
+    <Property Name="StockId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="LocationId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupplierAccount">
+    <Key>
+      <PropertyRef Name="SupplierAccDetailId" />
+    </Key>
+    <Property Name="SupplierAccDetailId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierId" Type="int" Nullable="false" />
+    <Property Name="Particular" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Credit" Type="int" />
+    <Property Name="Debit" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="AccountId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="SupplierId" />
+    </Key>
+    <Property Name="SupplierId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CellNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Company" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="Balance" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CellNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Image" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Withdraw">
+    <Key>
+      <PropertyRef Name="WithdrawId" />
+    </Key>
+    <Property Name="WithdrawId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Particular" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Time" Type="varchar" MaxLength="50" />
+    <Property Name="AccountId" Type="int" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <Association Name="FK_AccountDetail_Accounts">
+    <End Role="Accounts" Type="AdvInvSystemModel.Store.Accounts" Multiplicity="1" />
+    <End Role="AccountDetail" Type="AdvInvSystemModel.Store.AccountDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="AccountDetail">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AccountDetail_PurchaseInvoice">
+    <End Role="PurchaseInvoice" Type="AdvInvSystemModel.Store.PurchaseInvoice" Multiplicity="0..1" />
+    <End Role="AccountDetail" Type="AdvInvSystemModel.Store.AccountDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseInvoice">
+        <PropertyRef Name="PurchaseInvoiceId" />
+      </Principal>
+      <Dependent Role="AccountDetail">
+        <PropertyRef Name="PurchInvId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AccountDetail_SaleInvoice">
+    <End Role="SaleInvoice" Type="AdvInvSystemModel.Store.SaleInvoice" Multiplicity="0..1" />
+    <End Role="AccountDetail" Type="AdvInvSystemModel.Store.AccountDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleInvoice">
+        <PropertyRef Name="SaleInvoicId" />
+      </Principal>
+      <Dependent Role="AccountDetail">
+        <PropertyRef Name="SaleInvId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AddFund_Accounts1">
+    <End Role="Accounts" Type="AdvInvSystemModel.Store.Accounts" Multiplicity="0..1" />
+    <End Role="AddFund" Type="AdvInvSystemModel.Store.AddFund" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="AddFund">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AddFund_LoginUsers">
+    <End Role="LoginUsers" Type="AdvInvSystemModel.Store.LoginUsers" Multiplicity="0..1" />
+    <End Role="AddFund" Type="AdvInvSystemModel.Store.AddFund" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoginUsers">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="AddFund">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AddFund_StockLocations1">
+    <End Role="StockLocations" Type="AdvInvSystemModel.Store.StockLocations" Multiplicity="0..1" />
+    <End Role="AddFund" Type="AdvInvSystemModel.Store.AddFund" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocations">
+        <PropertyRef Name="StockLocId" />
+      </Principal>
+      <Dependent Role="AddFund">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AddStock_LoginUsers">
+    <End Role="LoginUsers" Type="AdvInvSystemModel.Store.LoginUsers" Multiplicity="0..1" />
+    <End Role="AddStock" Type="AdvInvSystemModel.Store.AddStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoginUsers">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="AddStock">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AddStock_Products">
+    <End Role="Products" Type="AdvInvSystemModel.Store.Products" Multiplicity="0..1" />
+    <End Role="AddStock" Type="AdvInvSystemModel.Store.AddStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="AddStock">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BnkTans_AccountDetail">
+    <End Role="AccountDetail" Type="AdvInvSystemModel.Store.AccountDetail" Multiplicity="0..1" />
+    <End Role="BnkTans" Type="AdvInvSystemModel.Store.BnkTans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountDetail">
+        <PropertyRef Name="AccountsDetailId" />
+      </Principal>
+      <Dependent Role="BnkTans">
+        <PropertyRef Name="AccountDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BnkTans_ChequeList">
+    <End Role="ChequeList" Type="AdvInvSystemModel.Store.ChequeList" Multiplicity="0..1" />
+    <End Role="BnkTans" Type="AdvInvSystemModel.Store.BnkTans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChequeList">
+        <PropertyRef Name="ChequeId" />
+      </Principal>
+      <Dependent Role="BnkTans">
+        <PropertyRef Name="ChequeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CashTrans_AccountDetail">
+    <End Role="AccountDetail" Type="AdvInvSystemModel.Store.AccountDetail" Multiplicity="1" />
+    <End Role="CashTrans" Type="AdvInvSystemModel.Store.CashTrans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountDetail">
+        <PropertyRef Name="AccountsDetailId" />
+      </Principal>
+      <Dependent Role="CashTrans">
+        <PropertyRef Name="AccountDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CustomersAccount_Customers">
+    <End Role="Customers" Type="AdvInvSystemModel.Store.Customers" Multiplicity="1" />
+    <End Role="CustomersAccount" Type="AdvInvSystemModel.Store.CustomersAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="CustomersAccount">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExcludeProducts_LoginUsers">
+    <End Role="LoginUsers" Type="AdvInvSystemModel.Store.LoginUsers" Multiplicity="0..1" />
+    <End Role="ExcludeProducts" Type="AdvInvSystemModel.Store.ExcludeProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoginUsers">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ExcludeProducts">
+        <PropertyRef Name="userId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExcludeProducts_Products">
+    <End Role="Products" Type="AdvInvSystemModel.Store.Products" Multiplicity="0..1" />
+    <End Role="ExcludeProducts" Type="AdvInvSystemModel.Store.ExcludeProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ExcludeProducts">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExcludeProducts_StockLocations">
+    <End Role="StockLocations" Type="AdvInvSystemModel.Store.StockLocations" Multiplicity="0..1" />
+    <End Role="ExcludeProducts" Type="AdvInvSystemModel.Store.ExcludeProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocations">
+        <PropertyRef Name="StockLocId" />
+      </Principal>
+      <Dependent Role="ExcludeProducts">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expense_Accounts">
+    <End Role="Accounts" Type="AdvInvSystemModel.Store.Accounts" Multiplicity="1" />
+    <End Role="Expense" Type="AdvInvSystemModel.Store.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expense_LoginUsers">
+    <End Role="LoginUsers" Type="AdvInvSystemModel.Store.LoginUsers" Multiplicity="1" />
+    <End Role="Expense" Type="AdvInvSystemModel.Store.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoginUsers">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expense_StockLocations">
+    <End Role="StockLocations" Type="AdvInvSystemModel.Store.StockLocations" Multiplicity="1" />
+    <End Role="Expense" Type="AdvInvSystemModel.Store.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocations">
+        <PropertyRef Name="StockLocId" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FundTrans_LoginUsers">
+    <End Role="LoginUsers" Type="AdvInvSystemModel.Store.LoginUsers" Multiplicity="0..1" />
+    <End Role="FundTrans" Type="AdvInvSystemModel.Store.FundTrans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoginUsers">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="FundTrans">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FundTrans_StockLocations">
+    <End Role="StockLocations" Type="AdvInvSystemModel.Store.StockLocations" Multiplicity="0..1" />
+    <End Role="FundTrans" Type="AdvInvSystemModel.Store.FundTrans" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocations">
+        <PropertyRef Name="StockLocId" />
+      </Principal>
+      <Dependent Role="FundTrans">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoginUsers_StockLocations">
+    <End Role="StockLocations" Type="AdvInvSystemModel.Store.StockLocations" Multiplicity="0..1" />
+    <End Role="LoginUsers" Type="AdvInvSystemModel.Store.LoginUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocations">
+        <PropertyRef Name="StockLocId" />
+      </Principal>
+      <Dependent Role="LoginUsers">
+        <PropertyRef Name="LocAssigned" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Brands">
+    <End Role="Brands" Type="AdvInvSystemModel.Store.Brands" Multiplicity="1" />
+    <End Role="Products" Type="AdvInvSystemModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brands">
+        <PropertyRef Name="BrandId" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDetail_Products">
+    <End Role="Products" Type="AdvInvSystemModel.Store.Products" Multiplicity="1" />
+    <End Role="PurchaseDetail" Type="AdvInvSystemModel.Store.PurchaseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="PurchaseDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseDetail_PurchaseInvoice">
+    <End Role="PurchaseInvoice" Type="AdvInvSystemModel.Store.PurchaseInvoice" Multiplicity="1" />
+    <End Role="PurchaseDetail" Type="AdvInvSystemModel.Store.PurchaseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseInvoice">
+        <PropertyRef Name="PurchaseInvoiceId" />
+      </Principal>
+      <Dependent Role="PurchaseDetail">
+        <PropertyRef Name="PurchaseInvoice" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseInvoice_Accounts">
+    <End Role="Accounts" Type="AdvInvSystemModel.Store.Accounts" Multiplicity="1" />
+    <End Role="PurchaseInvoice" Type="AdvInvSystemModel.Store.PurchaseInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="PurchaseInvoice">
+        <PropertyRef Name="AccountCredit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseInvoice_LoginUsers">
+    <End Role="LoginUsers" Type="AdvInvSystemModel.Store.LoginUsers" Multiplicity="1" />
+    <End Role="PurchaseInvoice" Type="AdvInvSystemModel.Store.PurchaseInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoginUsers">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="PurchaseInvoice">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseInvoice_StockLocations">
+    <End Role="StockLocations" Type="AdvInvSystemModel.Store.StockLocations" Multiplicity="1" />
+    <End Role="PurchaseInvoice" Type="AdvInvSystemModel.Store.PurchaseInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocations">
+        <PropertyRef Name="StockLocId" />
+      </Principal>
+      <Dependent Role="PurchaseInvoice">
+        <PropertyRef Name="StockLocId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseInvoice_Suppliers">
+    <End Role="Suppliers" Type="AdvInvSystemModel.Store.Suppliers" Multiplicity="0..1" />
+    <End Role="PurchaseInvoice" Type="AdvInvSystemModel.Store.PurchaseInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierId" />
+      </Principal>
+      <Dependent Role="PurchaseInvoice">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleDetail_SaleInvoice">
+    <End Role="SaleInvoice" Type="AdvInvSystemModel.Store.SaleInvoice" Multiplicity="1" />
+    <End Role="SaleDetail" Type="AdvInvSystemModel.Store.SaleDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaleInvoice">
+        <PropertyRef Name="SaleInvoicId" />
+      </Principal>
+      <Dependent Role="SaleDetail">
+        <PropertyRef Name="SaleInvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleInvoice_Accounts">
+    <End Role="Accounts" Type="AdvInvSystemModel.Store.Accounts" Multiplicity="0..1" />
+    <End Role="SaleInvoice" Type="AdvInvSystemModel.Store.SaleInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="SaleInvoice">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleInvoice_Customers">
+    <End Role="Customers" Type="AdvInvSystemModel.Store.Customers" Multiplicity="1" />
+    <End Role="SaleInvoice" Type="AdvInvSystemModel.Store.SaleInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="SaleInvoice">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleInvoice_LoginUsers">
+    <End Role="LoginUsers" Type="AdvInvSystemModel.Store.LoginUsers" Multiplicity="1" />
+    <End Role="SaleInvoice" Type="AdvInvSystemModel.Store.SaleInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoginUsers">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="SaleInvoice">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaleInvoice_StockLocations">
+    <End Role="StockLocations" Type="AdvInvSystemModel.Store.StockLocations" Multiplicity="1" />
+    <End Role="SaleInvoice" Type="AdvInvSystemModel.Store.SaleInvoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocations">
+        <PropertyRef Name="StockLocId" />
+      </Principal>
+      <Dependent Role="SaleInvoice">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stocks_StockLocations">
+    <End Role="StockLocations" Type="AdvInvSystemModel.Store.StockLocations" Multiplicity="1" />
+    <End Role="Stocks" Type="AdvInvSystemModel.Store.Stocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocations">
+        <PropertyRef Name="StockLocId" />
+      </Principal>
+      <Dependent Role="Stocks">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierAccount_Suppliers">
+    <End Role="Suppliers" Type="AdvInvSystemModel.Store.Suppliers" Multiplicity="1" />
+    <End Role="SupplierAccount" Type="AdvInvSystemModel.Store.SupplierAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierId" />
+      </Principal>
+      <Dependent Role="SupplierAccount">
+        <PropertyRef Name="SupplierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Withdraw_Accounts">
+    <End Role="Accounts" Type="AdvInvSystemModel.Store.Accounts" Multiplicity="0..1" />
+    <End Role="Withdraw" Type="AdvInvSystemModel.Store.Withdraw" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Withdraw">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Withdraw_LoginUsers">
+    <End Role="LoginUsers" Type="AdvInvSystemModel.Store.LoginUsers" Multiplicity="0..1" />
+    <End Role="Withdraw" Type="AdvInvSystemModel.Store.Withdraw" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoginUsers">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Withdraw">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Withdraw_StockLocations">
+    <End Role="StockLocations" Type="AdvInvSystemModel.Store.StockLocations" Multiplicity="0..1" />
+    <End Role="Withdraw" Type="AdvInvSystemModel.Store.Withdraw" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockLocations">
+        <PropertyRef Name="StockLocId" />
+      </Principal>
+      <Dependent Role="Withdraw">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_Accounts_type" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="type" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_Add_fund" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_Add_Stock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prodId" Type="int" Mode="In" />
+    <Parameter Name="locId" Type="int" Mode="In" />
+    <Parameter Name="qnty" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_Customer_Report" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cusId" Type="int" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_finalStockList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="locId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_fund_transfer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_invoiceProduct_list" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_newStockList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="locId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_purchase_detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="purchaseId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_purchaseInvoice_Depth" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="purcInvId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_sale_detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="saleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_saleInvoice_Dept" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="saleInvId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Search_Exclude" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="branchId" Type="int" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_Search_Expense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="branchId" Type="int" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_search_purchaseInvoices" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="branchId" Type="int" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_search_saleInvoices" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="branchId" Type="int" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_stockList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="locId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Supplier_Report" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="supId" Type="int" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_view_StockAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="branchId" Type="int" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_withdraw_report" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+</Schema>
